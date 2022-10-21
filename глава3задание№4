@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int stolbec, chislo,stroka, i, h;
+	cin >> stolbec >> chislo >> stroka;
+	for (h = stolbec; h > 0; h -= 1, cout<<endl)
+	{
+		for (i = stroka; i > 0; i -= 1)
+		{
+			cout << chislo;
+
+		}
+		chislo -= 1;
+		stroka -= 1;
+	}
+	
+
+}
