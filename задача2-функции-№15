@@ -1,0 +1,20 @@
+//задача 2 функции №15
+#include <iostream>
+#include <iomanip>
+using  namespace std;
+float s(float a, float b, float c)
+{
+	float s, p;
+	p = (a + b + c) / 2.0;
+	s = sqrt(p * (p - a) * (p - b) * (p - c));
+	return s;
+}
+int main()
+{
+	float a, b, c, d, e, f, g, s1, s2, s3;
+	cin >> a >> b >> c >> d >> e >> f >> g;
+	s1 = s(e, d, g);
+	s2 = s(g, c, f);
+	s3 = s(f, b, a);
+	cout << fixed << setprecision(5) << s1 + s2 + s3;
+}
