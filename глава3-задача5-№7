@@ -1,0 +1,28 @@
+//задача 3-5 №7
+#include <iostream>
+using namespace std;
+float f(float x)
+{
+	float y;
+	if (x <= 0)
+	{
+		cout << "no";
+	}
+	y = x / (sqrt(2 * x - 1));
+	return y;
+}
+int main()
+{
+	float a, b;
+	cin >> a >> b;
+	float x, y, h;
+	cin >> h;
+	//x = a;
+	for (x = a; x <= b; x += h)
+	{
+		//y = f(x);
+		cout << "y = " << f(x) << endl;
+	}
+
+
+}
