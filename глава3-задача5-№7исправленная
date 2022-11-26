@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void f(float x)
+{
+	float y;
+	if (x <= 0)
+	{
+		cout << "no";
+	}
+	else
+	{
+		y = x / (sqrt(2 * x - 1));
+		cout << y;
+	}
+}
+int main()
+{
+	float a, b;
+	cin >> a >> b;
+	float x, y, h;
+	cin >> h;
+	for (x = a; x <= b; x += h)
+	{
+		cout << x << " ";
+		f(x);
+		cout << endl;
+	}
+}
