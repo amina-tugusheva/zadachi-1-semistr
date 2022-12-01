@@ -1,0 +1,18 @@
+//5-1 №13
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	float b1 = 1, b2 = 2, b;
+	float s = 1 / b1 + 1 / b2;
+	for (int i = 3; i <= n; i++)
+	{
+		b = b2 * i;
+		s = s + 1 / b;
+		b1 = b2;
+		b2 = b;
+
+	}
+	cout << s;
+}
