@@ -1,0 +1,19 @@
+//5-3 №16
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n, i = 1;
+	float e, s = 0, a3 = 3, a4 = 4;
+	cout << "e = ";
+	cin >> e;
+	while (fabs(1 / (a3 + a4)) >= e)
+	{
+		//cout << "a" << i << " = " << 1 / (a3 + a4) << endl;
+		s += 1 / (a3 + a4);
+		i++;
+		a3 *= 3;
+		a4 *= 4;
+	}
+	cout << "s = " << s << endl;
+}
