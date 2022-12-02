@@ -1,0 +1,21 @@
+//5-2 №4
+#include <iostream>
+using namespace std;
+int main()
+{
+	int k;
+	cin >> k;
+	float x;
+	cin >> x;
+	float b1 = 0, b2 = 1, b;
+	cout << "n1 = " << pow(x, 2) * pow(x, b1) / (pow((2 + 4 * b1), 2))<< endl;
+	float s = pow(x, 2) * pow(x, b1) / (pow((2 + 4 * b1), 2));
+	for (int i = 2; i <= k; i++)
+	{
+		b = b2;
+		cout << "n" << i << " = " << pow(x, 2) * pow(x, b) / (pow((2 + 4 * b), 2)) << endl;
+		s += pow(x, 2) * pow(x, b) / (pow((2 + 4 * b), 2));
+		b2 += 1;
+	}
+	cout << s << endl;
+}
