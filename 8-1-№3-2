@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+template <typename t>
+void sumd(t n)
+{
+	int s = 0;
+	for (int i = 1; i <= n; i++)
+	{
+		if (n % i == 0)
+			s += i;
+	}
+	//cout << s << endl;
+	if (n == s)
+		cout << s << endl;
+	
+}
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	for (int i = a; i <= b; i++)
+	{
+		//cout << i << " ";
+		sumd(i);
+	}
+}
