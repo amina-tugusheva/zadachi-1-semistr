@@ -1,0 +1,41 @@
+//6-1 № 13 статический
+#include <iostream>
+using namespace std;
+int main()
+{
+	const int n = 5, x = 2;
+
+	int mas[n];
+	for (int i = 0; i < n; i++)
+	{
+		cin >> mas[i];
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i] > x)
+		{
+			cout << i << " ";
+		}
+	}
+	
+
+}
+//двумерный:
+/*int main()
+{
+	const int n = 3, m = 4, x = 1;
+	int mas[n][m];
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			cin >> mas[i][j];
+		}
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] > x)
+			{
+				cout << i << " "<< j << endl;
+			}
+		}
+}*/
