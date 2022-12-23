@@ -1,0 +1,24 @@
+//7-3 № 8
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string pr, sl;
+	int s = 0;
+	string::size_type k = 0, pos = 0;
+	
+	getline(cin, pr);
+	pr = pr + ' ';
+	k = pr.find(" ", pos);
+	while (k != string::npos)
+	{
+		sl = pr.substr(pos, k - pos);
+		if (sl[0] == sl[sl.length() - 1])
+			s++;
+		pos = k + 1;
+		k = pr.find(" ", pos);
+	}
+	cout << "colvo = " << s << endl;
+	return 0;
+}
