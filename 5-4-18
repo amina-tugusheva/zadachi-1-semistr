@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int f(int n)
+{
+	float x, h = 0.1, s = 0;
+	float a = 1, b = 2;
+	for (x = a; x <= b; x += h)
+	{
+		s += (x - 1) / x;
+		cout << "x = " << x << "\t";
+		cout << "F(" << x <<") = " << (x - 1) / (n * x) << endl;
+		
+	}
+	return s;
+}
+int main()
+{
+	int n = 1;
+	float sn = 0, e;
+	cin >> e;
+	//for (int i = 1; i <= n; i++)
+	while (fabs(sn) <= e)
+	{
+		cout << "n = " << n << endl;
+		sn += f(n);
+		
+		//cout << sn;
+		n += 1;
+		//cout << "sn = " << sn << endl;
+	}
+	cout << "n = " << n; 
+}
