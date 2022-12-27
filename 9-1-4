@@ -1,0 +1,25 @@
+#include<fstream>
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	ifstream in("f.txt");
+	ofstream out("g.txt");
+	string s;
+	int mins = 100000;
+	while (in.peek() != EOF)
+	{
+		getline(in, s);
+		cout << s.length();
+		if (s.length() < mins)
+			mins = s.length();
+	}
+		//НАЙТИ САМУЮ КОРОТКУЮ СТРОКУ И ЕЕ ДЛИНУ
+		out << mins << endl;
+	
+	in.close();
+	out.close();
+	return 0;
+
+}
