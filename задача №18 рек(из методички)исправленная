@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+float f(float x, float e)
+{
+	
+	int n = 1;
+	float s = 0;
+	while (fabs(pow((x - 1), n) / (n * pow(x, n))) >= e)
+	{
+		s += pow((x - 1), n) / (n * pow(x, n));
+		cout << "F(" << x << ") = " << pow((x - 1), n) / (n * pow(x, n)) << "\t";
+		cout << "n = " << n << "\t";
+		n += 1;
+	}
+	return s;
+}
+
+int main()
+{
+	
+	float e;
+	cout << "e = ";
+	cin >> e;
+	for (float x = 1; x <= 2; x += 0.1)
+	{
+		cout << "x = " << x << endl;
+		f(x, e);
+		
+	}
+}
